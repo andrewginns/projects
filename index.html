@@ -1,0 +1,202 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>Andrew Ginns</title>
+    <link rel="canonical" href="http://example.ampproject.org/article-metadata.html" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Open-source framework for publishing content",
+        "datePublished": "2015-10-07T12:02:41Z",
+        "image": [
+          "logo.jpg"
+        ]
+      }
+    </script>
+	<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+	<style amp-custom>
+
+		/* fixed top menu has a 40px height*/
+		.nav {
+		  height:40px;
+		  border-bottom:1px solid #ddd;
+		  position:fixed;
+		  top:0;
+		  left:0;
+		  right:0;
+		  background-color:rgba(255,255,255,0.95);
+		  z-index:990;
+		}
+		
+		.nav a {
+		  float: left;
+		  display: block;
+		  color: black;
+		  font-family: calibri;
+		  text-align: center;
+		  padding: 10px 16px;
+		  text-decoration: none;
+		  font-size: 17px;
+		}
+		
+		.nav p {
+		  float: left;
+		  display: block;
+		  color: white;
+		  font-family: calibri;
+		  text-align: center;
+		  padding: 10px 16px
+		  text-decoration: none;
+		  font-size: 17px;
+		}
+
+ 		.nav a:last-child {
+		  float: right;
+		  display: block;
+		  color: black;
+		  font-family: calibri;
+		  text-align: center;
+		  padding: 10px 16px;
+		  text-decoration: none;
+		  font-size: 17px;
+		}
+		
+		.nav a:hover {
+		  background-color: #ddd;
+		  color: black;
+		}
+		
+		/* 40px padding top for the top menu*/
+		body{
+		  padding:40px 32px 4px 32px;
+		  font-family: calibri;
+		  background-color: white;
+		}
+
+		/* remove bullets and add transition effect */
+		nav ul{list-style-type: none;margin:0;padding:0;transition: transform .75s ease-in-out;  -webkit-transition: transform .75s ease-in-out;}
+
+		/* fixed menu button */
+		nav > ul >li{position: fixed;left:36px;top:0px;z-index:991;line-height:40px;}
+
+		/* initial state: hide the menu */
+		nav > ul > li > ul{position:fixed;top:0;left:-240px;width:240px;bottom:0;background:#fefefe;z-index:990;padding-top:36px;border-right:1px solid #ddd;  }
+
+		/* Hover state, the menu button has been clicked*/
+
+		/* scroll the menu into the page */
+		nav > ul > li:hover > ul{transform: translate3d( 240px, 0, 0 );-webkit-transform: translate3d( 240px, 0, 0 );}
+		
+
+		/* styling */
+		nav a{color: #ff2800;}
+		
+		nav > ul > li > ul > li{
+		  font-size:20px;
+		  padding:8px 0px 8px 20px;
+		  border-bottom:1px solid #ddd;
+		}
+		
+		nav > ul > li > ul > li >a{
+		  display:block;
+		  text-decoration:none;
+		  padding:8px 20px;
+		}
+
+		.main_text {
+		  padding-right: 5%;
+		  padding-left: 5%;
+		  text-align: justify;
+		}
+
+		@media screen and (max-width: 600px) {
+		  .nav a:not(:last-child) {display: none;}
+		  body {
+			  background-color: #f9f9f9;
+		  }
+		}
+		
+		@media screen and (min-width: 1100px) {
+		  body {
+			  background-color: pink;
+		  }
+		  
+		  .main_text {
+		  padding-right: 20%;
+		  padding-left: 20%;
+		  }
+		}
+		
+	</style>
+	</head>
+	<body>
+	
+		<div class="nav">
+		  <p>Hello, World!</p>
+		  <a href="/">Home</a>
+		  <a href="/projects">Projects</a>
+		  <a href="/contact">Contact</a>
+		  <a href="/about">About</a>
+		  <a href="http://lnked.in/ginns"target="_blank">Andrew Ginns</a>  
+		</div>
+		
+		<nav>
+			<ul>
+			  <li>&#9776;
+				<ul>
+				  <li id="header">Menu</li>
+				  <li><a href="/">Home</a></li>
+				  <li><a href="/projects">Projects</a></li>
+				  <li><a href="/contact">Contact</a></li>
+				  <li><a href="/about">About</a></li>
+				</ul>
+			  </li>
+			</ul>
+		  </nav>
+
+<!-- 		<div class="nav">
+		  <p>Hello, World!</p>
+		  <a href="/Documents/Github_website/index.html">Home</a>
+		  <a href="/Documents/Github_website/projects/index.html">Projects</a>
+		  <a href="/Documents/Github_website/contact/index.html">Contact</a>
+		  <a href="/Documents/Github_website/about/index.html">About</a>
+		  <a href="http://lnked.in/ginns"target="_blank">Andrew Ginns</a>  
+		</div>
+		
+		<nav>
+			<ul>
+			  <li>&#9776;
+				<ul>
+				  <li id="header">Menu</li>
+				  <li><a href="/Documents/Github_website/index.html">Home</a></li>
+				  <li><a href="/Documents/Github_website/projects/index.html">Projects</a></li>
+				  <li><a href="/Documents/Github_website/contact/index.html">Contact</a></li>
+				  <li><a href="/Documents/Github_website/about/index.html">About</a></li>
+				</ul>
+			  </li>
+			</ul>
+		  </nav> -->
+
+		<div class="main_text">
+		  <h2>Projects</h2>
+		  <p>On this website you'll find information on me and my projects. Please click the links to different sections in the top bar.</p>
+		  
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla neque nibh, ultricies at dapibus non, elementum eu quam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam felis ligula, congue ac tempor vel, finibus ac elit. Vestibulum id felis justo. Vestibulum sit amet massa scelerisque, fringilla sem a, accumsan velit. Proin eu mollis ipsum. Donec vitae ipsum tincidunt, suscipit purus ac, bibendum mi. In hac habitasse platea dictumst. Morbi sem tortor, rutrum et venenatis et, ultricies eu leo. Etiam blandit volutpat erat vel lobortis. Integer vel varius metus. Donec et convallis neque.</p>
+
+		<p>Nam efficitur elit eget fringilla posuere. Duis convallis posuere placerat. Nam nec vulputate odio. Etiam at ex facilisis, mattis tellus non, semper enim. Quisque efficitur velit eros, a posuere arcu dignissim vel. Pellentesque non leo in ipsum pretium blandit. Suspendisse sit amet elit quis quam bibendum molestie. Vestibulum vitae lectus non massa pretium facilisis. Sed ornare, lectus eget pulvinar commodo, risus felis imperdiet elit, in tristique odio mauris ac urna. Maecenas eleifend semper cursus. Fusce tempor dignissim mauris, a consequat mi pulvinar eu. Cras quis lectus mauris. In porttitor semper consectetur.</p>
+
+		<p>Praesent elementum consequat massa vel mattis. Morbi congue lacinia leo non hendrerit. Nunc suscipit erat a luctus facilisis. Maecenas dictum erat ut ante rhoncus pretium. Suspendisse pharetra justo tempus, iaculis purus mollis, pulvinar arcu. Quisque blandit turpis nulla, et pretium metus luctus sed. Donec consequat laoreet dolor sit amet condimentum. Phasellus eu tempor augue, at semper est. Sed aliquam ante tincidunt ligula bibendum suscipit. Vestibulum mattis maximus congue. Aenean quis consequat eros. Maecenas rutrum odio sit amet risus egestas vestibulum. In justo nisi, luctus in vestibulum in, pulvinar eget ex. Nunc vestibulum imperdiet enim, maximus venenatis mi porttitor sed.</p>
+
+		<p>Vestibulum congue lobortis risus, eget feugiat est molestie ut. Nulla venenatis pulvinar lacus at ornare. Ut elit magna, pulvinar a dolor id, porta finibus leo. Aliquam egestas porttitor tincidunt. Vestibulum rhoncus lacinia consequat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam rhoncus sagittis eros ut pellentesque. Proin lorem purus, fringilla vitae fermentum eget, facilisis volutpat augue. Nunc velit mauris, accumsan consequat elementum non, tempor vitae ex.</p>
+
+		<p>Suspendisse non mattis erat. Pellentesque sit amet lectus at augue hendrerit volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam rhoncus tincidunt lectus, malesuada aliquam arcu luctus at. Sed vitae neque eget arcu convallis consequat venenatis eget enim. Nulla porttitor pellentesque sem auctor venenatis. Aliquam ut consequat quam. Suspendisse iaculis nec libero id porta. Morbi blandit volutpat urna et cursus. Etiam accumsan mattis sapien, at feugiat dolor hendrerit nec. Sed at cursus nisi. Pellentesque sollicitudin laoreet lectus, ac euismod justo dignissim a. Integer fermentum placerat hendrerit. Aenean rhoncus purus felis, ut suscipit odio rhoncus non.</p>
+		</div>
+		
+	</body>
+</html>
